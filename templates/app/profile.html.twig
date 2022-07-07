@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TuiDoc | {{app.user.firstname |title}} {{app.user.lastname |title}}{% endblock %}
+
+{% block body %}
+
+
+
+<section style="margin-top:50px"></section>
+
+<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-wrapper">
+                    <h2 class="product-title"> {{app.user.firstname|title}} {{app.user.lastname|title}}</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('main_route') }}">Accueil /</a></li>
+                        <li class="current">Profil</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="content" class="section-padding">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-3 page-sidebar">
+
+                <aside>
+                    <div class="sidebar-box">
+
+                        <div class="card">
+                            <div class="card-body">
+
+
+                                <div class="user">
+
+
+
+                                    <div class="usercontent">
+
+                                        <form method="POST" action="{{ path('update_profile_picture') }}"
+                                            enctype="multipart/form-data" id="update-photo-form">
+                                            <input type="hidden" name="photo-user-update" id="photo-update-trigger"
+                                                value="null">
+                                            <input type="file" name="photo" id="photo" style="visibility:hidden;">
+
+                                            <div class="avatar-user  m-auto pb-3">
+                                                <div style="background-image : url({{app.user.photoURL}})"
+                                                    class="profile-picture"></div>
+                                                <i class='bx bxs-camera update-profile-photo'></i>
+
+                                            </div>
+                                        </form>
+
+
+                                        <p class="text-center">
+                                            <strong>{{app.user.firstname|title}} {{app.user.lastname|title}}</strong>
+                                            <br>
+                                            <span class="text-muted">{{app.user.email}}</span>
+                                        </p>
+
+
+
+                                        <a href="{{path('edit_account_data_route')}}" class="text-center"><i
+                                                class='bx bxs-edit'></i> Modifier mon profil </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <nav class="navdashboard mt-3 mb-5">
+                            <ul class="list-group">
+
+                                {% if app.user.roles[0] == "ROLE_ADMIN" %}
+                                <li class="list-group-item">
+                                    <a class=" " href="{{ path('web_master_route') }}">
+                                        <i class="lni-dashboard"></i>
+                                        <span>Web master </span>
+                                    </a>
+                                </li>
+                                {% endif %}
+
+
+
+                                <li class="list-group-item">
+                                    <a class="active" href="{{ path('profile_route') }}">
+                                        <i class="lni-dashboard"></i>
+                                        <span>Mes documents </span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="list-group-item">
+                                    <a href="/logout" class="text-danger">
+                                        <i class="lni-enter"></i>
+                                        <span>Se déconnecter</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </aside>
+
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-9">
+                <div class="row page-content">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="inner-box">
+                            <div class="dashboard-box">
+                                <h2 class="dashbord-title">Mes documents </h2>
+                            </div>
+                            <div class="dashboard-wrapper">
+
+                                <ol class="list-group list-group-numbered mb-3">
+                                    {% for document in app.user.printedHistories %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                            <div class="fw-bold"><strong>{{document.contract.title}}</strong></div>
+                                            {{ document.printDate |date("m/d/Y H:i:s")    }}
+                                            </div>
+                                            <button class="btn btn-primary btn-sm print-doc-from-profile" data-to-print="{{document.content}}"  ><i class='bx bx-printer' ></i> Imprimer</button>
+                                        </li>
+                                        
+                                    {% endfor %}
+
+                                    
+
+                                  </ol>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}

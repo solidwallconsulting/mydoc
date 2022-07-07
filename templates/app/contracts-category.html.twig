@@ -1,0 +1,46 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+<section style="margin-top:50px"></section>
+
+<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-wrapper">
+                    <h2 class="product-title"> Tous les documents juridiques</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="{{ path('main_route') }}">Accueil /</a></li>
+                        <li class="current">{{ category.name }}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section  >
+ 
+    <div class="container">
+        <div class="row">  
+            <div class="col-sm-12 col-md-12"> 
+                <strong>{{ category.name }}</strong>
+
+                <ul >
+                    {% for c in category.contacts | sort((a, b) => a.title <=> b.title) %}
+                        <li><a href="{{ path('generate_ontract_route',{id:c.id}) }}">{{c.title}}</a></li>
+                    {% endfor %}
+
+                </ul>
+            </div> 
+        
+        </div>
+    </div>
+</section>
+
+{% endblock %}

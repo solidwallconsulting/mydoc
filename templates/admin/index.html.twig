@@ -1,0 +1,44 @@
+{% extends 'admin-base.html.twig' %}
+
+
+{% block body %}
+
+
+<main class="main-content">
+    {% block topNav %}
+    {{ parent() }}
+    {% endblock %}
+
+    <div class="conatiner-fluid content-inner mt-n5 py-0">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+               <div class="row row-cols-1">
+                  <div class="d-slider1 overflow-hidden ">
+                     <ul  class="swiper-wrapper list-inline m-0 p-0 mb-2">
+ 
+                        <!--<li class="swiper-slide card card-slide">
+                           <div class="card-body">
+                              <div class="progress-widget"> 
+                                 <div class="progress-detail">
+                                    <p  class="mb-2">Nombre total des membres</p>
+                                    <h4 class="counter">0</h4>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>-->
+ 
+                        
+                     </ul>
+                     <div class="swiper-button swiper-button-next"></div>
+                     <div class="swiper-button swiper-button-prev"></div>
+                  </div>
+               </div>
+            </div>
+
+
+  
+         </div>
+    </div>
+
+
+    {% endblock %}

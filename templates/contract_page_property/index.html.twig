@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ContractPageProperty index{% endblock %}
+
+{% block body %}
+    <h1>ContractPageProperty index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FeildName</th>
+                <th>FeildID</th>
+                <th>Type</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contract_page_property in contract_page_properties %}
+            <tr>
+                <td>{{ contract_page_property.id }}</td>
+                <td>{{ contract_page_property.feildName }}</td>
+                <td>{{ contract_page_property.feildID }}</td>
+                <td>{{ contract_page_property.type }}</td>
+                <td>
+                    <a href="{{ path('contract_page_property_show', {'id': contract_page_property.id}) }}">show</a>
+                    <a href="{{ path('contract_page_property_edit', {'id': contract_page_property.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('contract_page_property_new') }}">Create new</a>
+{% endblock %}

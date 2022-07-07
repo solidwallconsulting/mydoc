@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ContractPageProperty{% endblock %}
+
+{% block body %}
+    <h1>Create new ContractPageProperty</h1>
+
+    {{ include('contract_page_property/_form.html.twig') }}
+
+    <a href="{{ path('contract_page_property_index') }}">back to list</a>
+{% endblock %}

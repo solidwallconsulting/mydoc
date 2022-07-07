@@ -1,0 +1,32 @@
+.home-bloc{
+    background-color: #00bcd4;
+    color: white;
+    padding: 25px;
+    font-size: 18px;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.circile-number{
+    height: 73px;
+    width: 73px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid #00bcd4;
+    font-size: 29px;
+    font-weight: bold;
+    padding-top: 8px;
+    margin: auto;
+    margin-bottom: 15px;
+    
+}
+
+.bar-title{
+    width: 150px;
+    margin: auto;
+    height: 1px;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

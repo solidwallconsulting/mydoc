@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ContactPages{% endblock %}
+
+{% block body %}
+    <h1>ContactPages</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ contact_page.id }}</td>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <td>{{ contact_page.number }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ contact_page.content }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('contact_pages_index') }}">back to list</a>
+
+    <a href="{{ path('contact_pages_edit', {'id': contact_page.id}) }}">edit</a>
+
+    {{ include('contact_pages/_delete_form.html.twig') }}
+{% endblock %}

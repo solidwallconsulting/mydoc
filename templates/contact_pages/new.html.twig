@@ -1,0 +1,115 @@
+ 
+
+ 
+{% extends 'admin-base.html.twig' %}
+
+
+{% block body %}
+
+
+<main class="main-content">
+    {% block topNav %}
+    {{ parent() }}
+    {% endblock %}
+
+    <div class="conatiner-fluid content-inner mt-n5 py-0">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between flex-wrap">
+                        <div class="header-title">
+                            <h4 class="card-title">Ajouter un contrat</h4>
+                        </div>
+
+                        <div>
+                            <a class="btn btn-secondary btn-sm" href="{{ path('contact_pages_index',{id:contact_page.contract.id}) }}">Retour</a> 
+                        </div>
+
+                    </div>
+                    <div class="card-body" style="position: relative;">
+                           
+                    </div>
+
+
+                </div>
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <strong>Ajouter des variables</strong>
+                        <form  method="post" id="add-new-contract-feild-form" action="{{ path('add_page_contract_property',{id:contact_page.id}) }}">
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="">Nom du champ</label>
+                                        <input type="text"  class="form-control" name="field-name"  id="field-name" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="">Identifiant du champ</label>
+                                        <input type="text"  class="form-control" name="field-id"  id="field-id" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="">Type du champ</label>
+                                        <select class="form-control" name="field-id"  id="field-id" >
+                                            <option value="text">Text</option>
+                                            <option value="email">Email</option>
+                                            <option value="date">Date</option>
+                                            <option value="number">Numéro</option>
+                                            
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <button class="btn btn-block w-100 btn-info">Ajouter</button>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+
+                        </form>
+
+                        <hr>
+                        <strong>Propriétés ajoutées</strong>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ol class="list-group list-group-numbered w-100" id="selected-properties-list"></ol>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <strong>Page du contrat</strong>
+                        {{ include('contact_pages/_form.html.twig') }}
+                    </div>
+                </div>
+                
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+
+
+
+    {% endblock %}

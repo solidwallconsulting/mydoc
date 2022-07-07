@@ -1,0 +1,74 @@
+{% extends 'admin-base.html.twig' %}
+
+
+{% block body %}
+
+
+	<main class="main-content">
+		{% block topNav %}
+			{{ parent() }}
+		{% endblock %}
+
+		<div class="conatiner-fluid content-inner mt-n5 py-0">
+			<div class="row">
+
+				<div class="col-12">
+					<div class="card">
+						<div class="card-header d-flex justify-content-between flex-wrap">
+							<div class="header-title">
+								<h4 class="card-title">Mes messages</h4>
+							</div>
+
+
+							<a href="{{ path('message_index') }}" class="btn btn-secondary">Retour</a>
+
+
+						</div>
+						<div class="card-body w-100">
+
+                             {{ include('message/_delete_form.html.twig') }}
+							<table class="table">
+								<tbody>
+
+									<tr>
+										<th>Nom & prénom</th>
+										<td>{{ message.name }}</td>
+									</tr>
+
+									<tr>
+										<th>Date d'envoie</th>
+										<td>{{ message.sentAt ? message.sentAt|date('Y-m-d H:i:s') : '' }}</td>
+									</tr>
+
+									<tr>
+										<th>Email</th>
+										<td>{{ message.email }}</td>
+									</tr>
+									<tr>
+										<th>Sujet</th>
+										<td>{{ message.subject }}</td>
+									</tr> 
+								</tbody>
+							</table>
+
+						</div>
+
+
+					</div>
+
+
+
+                    <div class="card">
+                        <div class="card-body">
+                            <label for=""><strong>Message</strong></label>
+
+                            <div>
+                                {{ message.message }}
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+
+
+			{% endblock %}

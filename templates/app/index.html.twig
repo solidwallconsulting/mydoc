@@ -1,0 +1,326 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main id="main"> 
+    <section id="hero" class="d-flex align-items-center" style="height: 100vh;">
+        <div class="container text-center " data-aos="zoom-out" data-aos-delay="100">
+            <h1 style="margin-top: 56px;">Documents, formulaires et contrats en ligne</h1>
+            <h2>Trouvez tous les documents, formulaires et contrats dont vous avez besoin</h2>
+            <div class="row m-auto   " style="margin-bottom: 25px !important; width:80%">
+                <div class="col-sm-4 to-contracts" target="5">
+                    <div class="home-bloc text-center" >
+                        SERVICES POUR PARTICULIERS
+                    </div>
+                </div>
+                <div class="col-sm-4 to-contracts" target="6">
+                    <div class="home-bloc text-center" >
+                        ENTREPRISE
+                    </div>
+                </div>
+                <div class="col-sm-4 to-contracts text-center" target="7">
+                    <div class="home-bloc">
+                        TRAVAIL
+                    </div>
+                </div>
+
+            </div>
+            <div class="row m-auto  " style="  width:80%">
+                <div class="col-sm-4 to-contracts" target="8">
+                    <div class="home-bloc text-center">
+                        IMMOBILIER
+                    </div>
+                </div>
+                <div class="col-sm-4 to-contracts" target="9">
+                    <div class="home-bloc text-center">
+                       FAMILLE
+                    </div>
+                </div>
+                <div class="col-sm-4 to-contracts text-center" target="10">
+                    <div class="home-bloc" >
+                        DOCUMENTS ADMINISTRATIFS
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+
+            <p>
+                <a style="font-size: 20px;" href="{{ path('all_categories_route') }}">Voir tous les documents juridiques</a>
+            </p>
+
+
+        </div>
+    </section>
+
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h3>Documents de test </h3>
+
+                  <div class="row mt-5">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 ">
+                            <div class="d-flex">
+                            <div>
+                                <i style="font-size: 65px;
+                                color: #00bcd4;" class='bx bx-file'></i>
+                            </div>
+
+                            <div style="text-align: left;"> 
+                                <a href="/account/generate-ontract/2" title="Compromis de vente" class="link titre-doc">SARL</a>
+                                <p style="margin: 0;" class="w-100">Cliquez pour continuer</p>
+                            
+                            </div>
+                            </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 ">
+                        <div class="d-flex">
+                            <div>
+                                <i style="font-size: 65px;
+                                color: #00bcd4;" class='bx bx-file'></i>
+                            </div>
+
+                            <div style="text-align: left;"> 
+                                <a href="/account/generate-ontract/6" title="Compromis de vente" class="link titre-doc">Quittance de loyer</a>
+                                <p style="margin: 0;" class="w-100">Cliquez pour continuer</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 ">
+                    <div class="d-flex">
+                        <div>
+                            <i style="font-size: 65px;
+                            color: #00bcd4;" class='bx bx-file'></i>
+                        </div>
+
+                        <div style="text-align: left;"> 
+                            <a href="/account/generate-ontract/5" title="Compromis de vente" class="link titre-doc">Lettre de résilation</a>
+                            <p style="margin: 0;" class="w-100">Cliquez pour continuer</p>
+                        
+                        </div>
+                    </div>
+                </div>
+                  </div>
+               
+
+                    
+
+
+            </div>
+
+        
+
+            <div class="section-title">
+                <h3>Comment ça marche </h3>
+
+            </div>
+
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 text-center">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="circile-number">1</div>
+                            <h4 class="title"><a href="">Choisir votre document</a></h4>
+                            <p class="description">Trouver ce dont vous avez besoin et démarrer</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 text-center">
+                        <div class="icon-box w-100" data-aos="fade-up" data-aos-delay="200">
+                            <div class="circile-number">2</div>
+                            <h4 class="title"><a href="">Personnalisé</a></h4>
+                            <p class="description">Remplir et Rédigez en ligne</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0 text-center">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <div class="circile-number">3</div>
+                            <h4 class="title"><a href="">Imprimer ou télécharger</a></h4>
+                            <p class="description">Téléchargez et imprimez votre document personnalisé
+en illimité</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row mt-5 ">
+                    <div class="col-12 text-center">
+                        <button class="btn p-3 btn-warning text-white">VOIR LES DOCUMENTS</button>
+                    </div>
+
+                </div>
+
+            </div>
+    </section><!-- End About Section -->
+
+
+    <section id="clients" class="clients section-bg">
+        <h1>Ils parlent de nous</h1>
+        <div class="bar-title"></div>
+        <div class="container" data-aos="zoom-in">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/clients/client-1.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/clients/client-2.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/clients/client-3.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="/assets/img/clients/client-4.png" class="img-fluid" alt="">
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section id="clients" class="clients mt-5 ">
+        <h1>Pourquoi choisir MyDoc ?</h1>
+        <div class="bar-title"></div>
+        <div class="container" data-aos="zoom-in">
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <div class="icon-box">
+                        <div class="icon">
+
+                            <!--<i class="bx bxl-dribbble" style="font-size: 99px;"></i>-->
+                            <img src="./d1mxkq1wocxjoy.cloudfront.net/wp-beaver-uploads/2018/02/27140919/easy.png"
+                                alt="easy">
+                        </div>
+                        <h4><a href="">Simple</a></h4>
+                        <p>Un logiciel innovant pour vous guider dans la création de vos documents</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 aos-init aos-animate"
+                    data-aos="zoom-in" data-aos-delay="200">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="./d1mxkq1wocxjoy.cloudfront.net/wp-beaver-uploads/2018/02/27140908/fast.png"
+                                alt="fast">
+                        </div>
+                        <h4><a href="">Express</a></h4>
+                        <p>Un questionnaire intuitif pour obtenir un document personnalisé en à peine quelques
+                            minutes </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0 aos-init aos-animate"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="./d1mxkq1wocxjoy.cloudfront.net/wp-beaver-uploads/2018/02/27140918/complet.png"
+                                alt="complet">
+
+                        </div>
+                        <h4><a href="">Complet</a></h4>
+                        <p>Mydoc vous permet de gérer en ligne vos documents juridiques</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0 aos-init aos-animate"
+                    data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="./d1mxkq1wocxjoy.cloudfront.net/wp-beaver-uploads/2018/02/27135508/cheap.png"
+                                alt="cheap">
+
+                        </div>
+                        <h4><a href="">Economique</a></h4>
+                        <p>Economisez vos frais juridiques</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="row mt-5 mb-5">
+                <div class="col-12 text-center">
+                    <button class="btn p-3 btn-warning text-white">DEMARRER</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="owl-carousel testimonials-carousel">
+
+                <div class="testimonial-item">
+                    
+                    <h3>Maher ben salem</h3>
+                    <h4>Fondateur de benka</h4>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                       Depuis la création de la société benka nous utilisons mydoc pour tous nos besoins
+juridiques. Cette solution innovante nous permet de gagner du temps mais aussi
+beaucoup d&#39;argent !
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                </div>
+
+                 
+
+                <div class="testimonial-item">
+                    
+                    <h3>Amine Jelassi</h3>
+                    <h4>Fondateur de Tuitec</h4>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Mydoc nous aide à générer très rapidement des documents juridiques et nous
+permet de les signer en ligne. Les avocats sont toujours disponibles et réactifs. C&#39;est
+comme avoir un département juridique à moindre coût.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+</main>
+
+
+
+
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+{% endblock %}
